@@ -33,25 +33,25 @@ PHASE 2 (Frontend development)
 
 1. Priorities Definition
 
-   1.1 - Code Architecture Design
-   1.1.1 - Search for best code architecture design
-   1.1.2 - Create proper folder structure
-   1.1.3 - List possible technologies to be used in project
+   [x] 1.1 - Code Architecture Design
+   [x] 1.1.1 - Search for best code architecture design
+   [x] 1.1.2 - Create proper folder structure
+   [x] 1.1.3 - List possible technologies to be used in project
 
-   1.2 - Models sctructure
-   1.2.1 - Define all models to be used
-   1.2.2 - Define all models structure
-   1.2.3 - Define models possible functionalities
+   [] 1.2 - Models sctructure
+   [x] 1.2.1 - Define all models to be used
+   [x] 1.2.2 - Define all models structure
+   [] 1.2.3 - Define models possible functionalities
 
-   1.3 - API sctructure
-   1.3.1 - Define all possible routes, their request types, and more
-   1.3.2 - Define possible route guards
+   [] 1.3 - API sctructure
+   [] 1.3.1 - Define all possible routes, their request types, and more
+   [] 1.3.2 - Define possible route guards
 
-   1.4 - User authentication
-   1.4.1 - Sign up functionality
-   1.4.2 - Login functionality
-   1.4.3 - Logout functionality
-   1.4.4 - Session handling //TODO Recap sessions and cookies from youtube
+   [] 1.4 - User authentication
+   [] 1.4.1 - Sign up functionality
+   [] 1.4.2 - Login functionality
+   [] 1.4.3 - Logout functionality
+   [] 1.4.4 - Session handling //TODO Recap sessions and cookies from youtube
 
 ---
 
@@ -81,15 +81,15 @@ type: string,
 default: ''
 },
 
-location: {
+location:
+{
 type: String,
 default: 'Point',
-},
 coordinates: {
 type: [Number],
 required: true
-}
 },
+}
 
 avatar: String
 
@@ -99,7 +99,7 @@ unique: true,
 default: null,
 }
 
-facebookId: {
+gooleId: {
 type: string,
 unique: true,
 default: null,
@@ -132,34 +132,34 @@ type: string,
 default: ''
 },
 
-location: {
+location:
+{
 type: String,
 default: 'Point',
-},
 coordinates: {
 type: [Number],
 required: true
-}
+},
 },
 
 reviews: {
 type: [Reviews objectId],
 default: [],
-}
+},
 
 priceRating: {
 type: Number,
 default: 0
-}
+},
 
 qualityRating: {
 type: Number,
 default: 0
-}
+},
 
 schedule {
 type: [[Strings]]
-}
+},
 
 3. REVIEWS
 
@@ -174,7 +174,7 @@ require: true,
 },
 mediaUploads: {
 type: String
-}
+},
 restaurantId: Type.ObjectId
 
 4. RATING
