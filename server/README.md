@@ -38,14 +38,18 @@ PHASE 2 (Frontend development)
    [x] 1.1.2 - Create proper folder structure
    [x] 1.1.3 - List possible technologies to be used in project
 
-   [] 1.2 - Models sctructure
+   [x] 1.2 - Models sctructure
    [x] 1.2.1 - Define all models to be used
    [x] 1.2.2 - Define all models structure
-   [] 1.2.3 - Define models possible functionalities
+   [x] 1.2.3 - Define models possible functionalities
+   [] 1.2.3.1 - User should: - Favour restaurants - Search restaurants - Create a new discovery - Create profiles - Edit Profile - Delete profile - Find other users - later - Review restaurants - Rate restaurants
+   [] 1.2.3.2 - Restaurant should: - Be favoured - Receive reviews - Receive ratings - Be searched by users - Be located in a map
+   [] Reviews - Create reviews - Edit reviews - Delete reviews - Being voted helpful or not
+   [] Rating - Create rating / provide rating (edit)
 
-   [] 1.3 - API sctructure
-   [] 1.3.1 - Define all possible routes, their request types, and more
-   [] 1.3.2 - Define possible route guards
+   [x] 1.3 - API sctructure
+   [x] 1.3.1 - Define all possible routes, their request types, and more
+   [x] 1.3.2 - Define possible route guards
 
    [] 1.4 - User authentication
    [] 1.4.1 - Sign up functionality
@@ -184,3 +188,38 @@ quality: [Number],
 priceAverage: Number,
 qualityAverage: Number,
 restaurantId: Type.ObjectId
+
+API DESIGN
+
+## USER
+
+| GET | /users | Get all users |
+| POST | /users | Create a new user |
+| GET | /users/{username} | Get individual user |
+| PATCH | /users/{username} | Update existing user | Route guard needed |
+| DELETE | /users/{username} | Delete existing user | Route guard needed |
+
+## RESTAURANT
+
+| GET | /restaurants | Get all restaurants |
+| POST | /restaurants | Create a new restaurant |
+| GET | /restaurants?name=XYZ&city=XYZ | Get a list of restaurants base on filters |
+| GET | /restaurants/{restaurantId} | Get individual restaurant |
+| PATCH | /restaurants/{restaurantId} | Update existing restaurant | Route guard needed |
+| DELETE | /restaurants/{restaurantId} | Delete existing restaurant | Route guard needed |
+
+## REVIEW
+
+| GET | /reviews | Get all reviews |
+| POST | /reviews | Create a new review |
+| GET | /reviews?username=xyz | Get all reviews related to user |
+| GET | /reviews?restaurantID=xyz | Get all reviews related to restaurant |
+| PATCH | /reviews/{reviewId} | Update existing review | Route guard needed |
+| DELETE | /reviews/{reviewId} | Delete existing review | Route guard needed |
+
+## RATING
+
+| GET | /ratings | Get all ratings |
+| POST | /ratings | Create a new rating |
+| PATCH | /ratings/{ratingId} | Update existing rating | Route guard needed |
+| DELETE | /ratings/{ratingId} | Delete existing rating | Route guard needed |
