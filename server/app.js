@@ -1,6 +1,6 @@
 require('dotenv').config();
 const connectMongo = require('connect-mongo');
-const session = require('express-sessions');
+const session = require('express-session');
 const cors = require('cors');
 const serveFavicon = require('serve-favicon'); //todo - Implement
 const createError = require('create-error');
