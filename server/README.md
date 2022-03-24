@@ -194,7 +194,9 @@ API DESIGN
 ## USER
 
 | GET | /users | Get all users |
-| POST | /users | Create a new user |
+| POST | /auth/users/sign | Create a new user |
+| POST | /auth/users/login | log in a new user |
+| GET | /auth/users/logout | log out a new user |
 | GET | /users/{username} | Get individual user |
 | PATCH | /users/{username} | Update existing user | Route guard needed |
 | DELETE | /users/{username} | Delete existing user | Route guard needed |

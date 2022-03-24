@@ -3,24 +3,24 @@ const { Schema, model } = require('mongoose');
 const userSchema = new Schema(
   {
     username: {
-      type: string,
+      type: String,
       required: true,
       unique: true
     },
 
     email: {
-      type: string,
+      type: String,
       required: true,
       unique: true
     },
 
     password: {
-      type: string,
+      type: String,
       required: true
     },
 
     address: {
-      type: string,
+      type: String,
       default: null
     },
 
@@ -35,25 +35,25 @@ const userSchema = new Schema(
     avatar: String,
 
     facebookId: {
-      type: string,
+      type: String,
       unique: true,
       default: null
     },
 
     googleId: {
-      type: string,
+      type: String,
       unique: true,
       default: null
     },
 
     favorites: {
-      type: Array[Schema.Types.objectId],
+      type: [Schema.Types.objectId],
       ref: 'Restaurants',
       default: []
     },
 
     reviews: {
-      type: Array[Schema.Types.objectId],
+      type: [Schema.Types.objectId],
       ref: 'Reviews',
       default: []
     },
@@ -70,6 +70,6 @@ const userSchema = new Schema(
   }
 );
 
-const user = model('user', userSchema);
+const User = model('user', userSchema);
 
-module.exports = user;
+module.exports = User;
